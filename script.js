@@ -28,5 +28,19 @@ function flipCard(card) {
       card.style.transform = 'rotateY(0deg)';
     }
   }
+
+  window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    var navbar = header.querySelector('.navbar');
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+      navbar.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
+  
   
   
