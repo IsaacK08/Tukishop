@@ -827,6 +827,11 @@ footer .copyright {
     padding: 40px 40px;
   }
 
+  #header h2 {
+    font-size: 25px;
+    transform: translateX(-42%);
+  }
+
   #navbar {
     display: flex;
     flex-direction: column;
@@ -859,7 +864,12 @@ footer .copyright {
   #mobile i {
     color: #1a1a1a;
     font-size: 24px;
-    padding-left: 20px;
+    padding-left: 15px;
+    transform: translateX(150%);
+  }
+
+  #feature {
+    display: none;
   }
 
   #close {
@@ -881,6 +891,16 @@ footer .copyright {
     background-position: top 30% right 30%;
   }
 
+  #hero h1 {
+    text-align: center;
+    width: 110%;
+  }
+
+  #hero p {
+   text-align: center;
+   width: 120%; 
+  }
+
   #feature {
     position: relative;
     justify-content: center;
@@ -900,55 +920,85 @@ footer .copyright {
   }
 
   #banner {
-    height: 20vh;
+    height: 40vh;
   }
 
   #sm-banner .banner-box {
     min-width: 100%;
-    height: 30vh;
+    height: 50vh;
+    margin-bottom: 9px;
   }
 
   #banner3 {
     padding: 0 40px;
   }
 
+
   #banner3 .banner-box {
-    width: 28%;
+    width: 100%;
   }
 
   #newsletter .form {
     width: 70%;
   }
 
+  #product1 .pro {
+    width: 45%;
+    justify-content: space-between;
+    min-width: unset;
+    margin: 5px;
+  }
+
+  #product1 h5 {
+    font-size: 14px !important;
+  }
+
+  #product1 h4 {
+    font-size: 14px !important;
+  }
+
+
+  #product1 .star {
+    display: none;
+  }
+
+  #product1 img {
+    height: 60%;
+  }
+
+  #product1 .cart {
+    background-color: transparent !important;
+    color: #181818 !important;
+  }
   
 
 }
 
 @media (max-width:728px) {
   #hero {
-    height: 120vh;
+    height: 110vh;
     background-position: center;
 
   }
 
   #hero h2 {
     font-size: 30px;
-    transform: translateY(70%);
+    transform: translateY(90%);
   }
 
   #hero h1 {
     font-size: 30px;
-    transform: translateY(20%);
+    transform: translateY(40%);
   }
 
   #hero h4 {
     font-size: 18px;
-    transform: translateY(150%);
+    transform: translateY(170%);
   }
 
   #hero p {
     font-size: 13px;
-    transform: translateY(20%);
+    transform: translateY(40%);
   }
 
   
@@ -1063,7 +1113,7 @@ footer .copyright {
 
 @media (max-width:531px) {
   #hero {
-    height: 120vh;
+    height: 110vh;
     background-position: center;
 
   }
@@ -1119,18 +1169,21 @@ footer .copyright {
   }
 
   #hero h4 {
+    position: relative;
     font-size: 15px;
     transform: translateY(450%);
   }
   
 
   #hero h1 {
+    position: relative;
     font-size: 18px;
     transform: translateY(190%);
     font-size: 25px;
   }
 
   #hero h2 {
+    position: relative;
     font-size: 24px;
     transform: translateY(270%);
   }
@@ -1144,7 +1197,7 @@ footer .copyright {
 
   #hero button {
     position: relative;
-    transform: translateY(230%);
+    transform: translateY(180%);
   }
 
   #feature {
@@ -1322,6 +1375,28 @@ footer .copyright {
       height: 30vh;
     }
 
+  }
+
+  @media (max-width:350px) {
+    #hero h2 {
+      width: 101%;
+      text-align: center;
+    }
+
+    #banner {
+      height: 40vh;
+    }
+
+    #sm-banner h2 {
+     width: 105%;
+     margin-left: 0;
+    }
+
+    
+
+    #prodetails .single-pro-image {
+      left: 5px;
+    }
   }
 
   }
