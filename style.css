@@ -919,9 +919,10 @@ footer .copyright {
   #newsletter .form {
     width: 70%;
   }
+
+  
+
 }
-
-
 
 @media (max-width:728px) {
   #hero {
@@ -932,26 +933,37 @@ footer .copyright {
 
   #hero h2 {
     font-size: 30px;
-    transform: translateY(90%);
+    transform: translateY(70%);
   }
 
   #hero h1 {
     font-size: 30px;
-    transform: translateY(40%);
+    transform: translateY(20%);
   }
 
   #hero h4 {
     font-size: 18px;
-    transform: translateY(170%);
+    transform: translateY(150%);
   }
 
   #hero p {
     font-size: 13px;
-    transform: translateY(40%);
+    transform: translateY(20%);
   }
+
+  
+
+  #feature .fe-box .back-face p {
+  padding: 10.2px;
+  }
+  
 
   #page-header h2 {
     font-size: 30px;
+  }
+
+  #page-header {
+    margin-bottom: 50px;
   }
 
   #prodetails p {
@@ -981,18 +993,22 @@ footer .copyright {
   }
 
   #prodetails .small-img-group {
+    position: relative;
     height: 20%;
-    width: 418%;
+    width: 408%;
     display: inline;
+
   }
 
-  #product1 {
-    display: none;
+  #product1 h2 {
+    font-size: 35px;
+    line-height: 35px;
   }
 
   #prodetails .single-pro-image {
+    position: relative;
     width: 1090px;
-    margin-left: 0;
+    margin-left: 17.3px;
   }
 
   #prodetails .single-pro-details h2 {
@@ -1011,13 +1027,7 @@ footer .copyright {
   
   }
 
-  #newsletter {
-    display: none;
-  }
-
-  footer {
-    display: none;
-  }
+ 
 
   #prodetails .product-actions {
     flex-direction:column;
@@ -1067,6 +1077,7 @@ footer .copyright {
     font-size: 30px;
     transform: translateY(40%);
   }
+  
 
   #hero h4 {
     font-size: 18px;
@@ -1111,6 +1122,7 @@ footer .copyright {
     font-size: 15px;
     transform: translateY(450%);
   }
+  
 
   #hero h1 {
     font-size: 18px;
@@ -1277,8 +1289,10 @@ footer .copyright {
 
   @media (max-width: 851px) {
     #hero {
-      height: 110vh;
+      height: 100vh;
     }
+
+    
   }
 
   @media (max-width: 740px) {
@@ -1286,6 +1300,8 @@ footer .copyright {
     #feature {
       position: relative;
     }
+
+    
 
     #feature .fe-box {
       position: relative;
@@ -1305,6 +1321,7 @@ footer .copyright {
     #banner {
       height: 30vh;
     }
+
   }
 
   }
