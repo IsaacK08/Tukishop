@@ -29,6 +29,8 @@ function flipCard(card) {
     }
   }
 
+  /*HEADER*/
+
   window.addEventListener('scroll', function() {
     var header = document.getElementById('header');
     var navbar = header.querySelector('.navbar');
@@ -40,7 +42,18 @@ function flipCard(card) {
       navbar.classList.remove('scrolled');
     }
   });
-  
-  
-  
-  
+
+
+
+
+ // Obtener elementos del DOM
+const submenu = document.querySelector("#navbar .submenu");
+const submenuTriggers = document.querySelectorAll("#navbar .submenu-trigger");
+
+// Mostrar u ocultar el submenú al hacer clic en los elementos correspondientes
+submenuTriggers.forEach(function(trigger) {
+  trigger.addEventListener("click", function(event) {
+    event.stopPropagation();
+    submenu.classList.toggle("show");
+  });
+});

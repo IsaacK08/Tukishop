@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
 
 html {
@@ -95,6 +96,7 @@ body {
 /*HEADER START*/
 
 #header {
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,6 +108,7 @@ body {
   top: 0;
   left: 0;
   transition: background-color 0.5s ease-in-out;
+ 
 }
 
 #header.scrolled {
@@ -121,6 +124,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #navbar li {
@@ -154,6 +158,59 @@ body {
 #close {
   display: none;
 }
+
+#navbar .submenu {
+  width: 280px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #181818;
+  left: 0;
+  border-radius: 5px;
+  padding: 8px;
+  max-height: 200px; /* Altura máxima del submenú */
+  overflow-y: auto; /* Habilitar la barra de desplazamiento vertical */
+  z-index: 999;
+}
+
+#navbar li:hover .submenu {
+  display: block;
+}
+
+.submenu h2 {
+  color: white;
+  display: none;
+}
+
+#navbar .submenu.show {
+  display: block;
+}
+
+#navbar .submenu ~ li {
+  transform: translateY(100%);
+  z-index: 1;
+}
+
+#navbar .submenu li a {
+  color: #ffffff;
+}
+
+#navbar .submenu::-webkit-scrollbar {
+  width: 2px;
+}
+
+#navbar .submenu::-webkit-scrollbar-track {
+  background-color: #181818; 
+}
+
+#navbar .submenu::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}
+
+#navbar .submenu::-webkit-scrollbar-thumb:hover {
+  background-color: #f1f1f1;
+}
+
 
 /*HOME PAGE*/
 #hero {
@@ -818,6 +875,224 @@ footer .copyright {
 }
 
 
+
+
+
+
+
+/*WOMAN CLOTHES*/
+
+#herowoman {
+  background-image: url(img/fondowoman.png);
+  height: 102vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 180px 0px 80px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-15%);
+  position: relative;
+}
+
+#heromen {
+  background-image: url(img/HEROMEN.png);
+  height: 102vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 180px 0px 80px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-15%);
+  position: relative;
+}
+
+#herowoman h2 {
+  font-size: 30px;
+  color:#ffe800;
+  line-height: 30px;
+  transform: translateY(190%);
+}
+
+#herowoman h1 {
+  font-size: 30px;
+  color:#fff;
+  line-height: 40px;
+  background-color: #181818;
+  transform: translateY(160%);
+}
+
+#herowoman p {
+  font-size: 15px;
+  color:#ffe800;
+  line-height: 20px;
+  transform: translateY(290%);
+
+}
+
+#herowoman h4 {
+  font-size: 15px;
+  color:#fff;
+  background-color: #181818;
+  transform: translateY(230%);
+}
+
+#heromen h2 {
+  font-size: 30px;
+  color:#ffe800;
+  line-height: 30px;
+  transform: translateY(190%);
+}
+
+#heromen h1 {
+  font-size: 30px;
+  color:#fff;
+  line-height: 40px;
+  background-color: #181818;
+  transform: translateY(160%);
+}
+
+#heromen p {
+  font-size: 15px;
+  color:#ffe800;
+  line-height: 20px;
+  transform: translateY(290%);
+
+}
+
+#heromen h4 {
+  font-size: 15px;
+  color:#fff;
+  background-color: #181818;
+  transform: translateY(230%);
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998; 
+  display: none;
+}
+
+#close-menu {
+  color: #ffffff;
+  transform: translateX(2660%);
+}
+
+#ropamujer {
+  position: fixed;
+  top: 83px;
+  z-index: 9999;
+  
+}
+
+#ropamujer ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color:#181818;
+  border-radius: 0px 5px 5px 0px;
+  padding: 30px;
+  width: 250%;
+  margin: 0;
+  height: 510px;
+  overflow-y: auto;
+}
+
+#ropamujer ul::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 10px;
+}
+
+#ropamujer ul::-webkit-scrollbar-thumb {
+  background-color: #181818;
+  border-radius: 0px;
+}
+
+#ropamujer ul::-webkit-scrollbar-track {
+  background-color: #fff;
+
+}
+
+#ropamujer ul li {
+  margin-bottom: 10px;
+}
+
+#ropamujer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#ropamujer ul li a:hover {
+  color: #ffe800;
+}
+
+#iconomenu {
+  background-color: #181818;
+  display: inline;
+  padding: 10px;
+  border-radius: 0px 5px 5px 0px;
+  z-index: 9999;
+}
+
+#woman-menu {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 20px;
+  color: #ffffff;
+  transform: translateY(8%);
+}
+
+#woman-menu span {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+#navbar li {
+  position: relative;
+}
+
+.popup-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 9999;
+}
+
+.popup-container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f1f1f1 transparent;
+}
+
+
+
+
+
+
+
+
 /*START MEDIA QUERY*/
 
 @media (max-width: 1200px) {
@@ -895,6 +1170,9 @@ padding-bottom: 18px;
     font-size: 12px;
   }
 }
+
+
+
 
 @media (max-width:768px) {
   #feature {
