@@ -57,3 +57,50 @@ submenuTriggers.forEach(function(trigger) {
     submenu.classList.toggle("show");
   });
 });
+
+let currentlyPlaying = null;
+
+document.querySelectorAll('.video-container').forEach(container => {
+  const video = container.querySelector('.gallery-video');
+  const playButton = container.querySelector('.play-button');
+
+  playButton.addEventListener('click', () => {
+    if (currentlyPlaying && currentlyPlaying !== video) {
+      currentlyPlaying.pause();
+      currentlyPlaying.closest('.video-container').querySelector('.play-button').classList.remove('hidden');
+    }
+
+    if (video.paused) {
+      video.play();
+      playButton.classList.add('hidden');
+      currentlyPlaying = video;
+    } else {
+      video.pause();
+      playButton.classList.remove('hidden');
+      currentlyPlaying = null;
+    }
+  });
+
+  video.addEventListener('ended', () => {
+    playButton.classList.remove('hidden');
+    currentlyPlaying = null;
+  });
+});
+
+document.querySelectorAll('.gallery-video').forEach(video => {
+  video.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+});
+
+document.getElementById('scrollToCategory').addEventListener('click', function() {
+  document.querySelector('#categories').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('scrollToFooter').addEventListener('click', function() {
+  document.querySelector('.section-p1').scrollIntoView({ behavior: 'smooth' });
+});

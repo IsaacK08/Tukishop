@@ -374,14 +374,14 @@ body {
 }
 
 #product1 .pro {
-  width: 23%;
+  width: 350px;
 min-width: 190px;
   padding: 10px 12px;
   border: 1px solid #BDBDBD;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-  margin: 15px 0;
+  margin: 25px 21px;
   transition: 0.2s ease;
   position: relative;
 }
@@ -446,7 +446,7 @@ min-width: 190px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(img/about/gateria.webp);
+  background-image: url(img/banner/cats.png);
   width: 100%;
   height: 60vh;
   background-size: cover;
@@ -478,23 +478,71 @@ min-width: 190px;
 /*GALLERY SECTION*/
 
 .fotos {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: auto;
 }
-#gallery .fotos img {
+
+#gallery .fotos img, #gallery .fotos video {
   width: 300px;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
-border-radius: 20px;
-margin: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  cursor: pointer;
+  position: relative;
 }
 
-#gallery img:hover {
+#gallery img:hover, #gallery video:hover {
   transition: 0.5s;
   width: 320px;
 }
+
+/* Estilos para el contenedor del video */
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilos para el botón de reproducción */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: url('img/banner/play1.png') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  z-index: 10;
+  display: block;
+}
+
+.play-button.hidden {
+  display: none;
+}
+
+/* Esconder controles del video */
+.gallery-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-video::-webkit-media-controls {
+  display: none;
+}
+
+.gallery-video::-webkit-media-controls-enclosure {
+  display: none;
+}
+
+
+
 
 /*FOOTER*/
 
