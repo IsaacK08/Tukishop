@@ -9,6 +9,34 @@ if (bar) {
   })
 }
 
+
+const intro = document.getElementById("intro");
+const video = document.getElementById("intro-video");
+const mainContent = document.getElementById("main-content");
+
+// Detectar si es móvil
+function isMobile() {
+    return window.matchMedia("(max-width: 768px)").matches;
+}
+
+// Asignar el video según el dispositivo
+video.src = isMobile()
+    ? "video/avisocel.mp4"
+    : "video/avisoopc.mp4";
+
+video.addEventListener("loadeddata", () => {
+    video.play().catch(() => {});
+});
+
+video.addEventListener("ended", () => {
+    intro.style.opacity = "0";
+    mainContent.style.opacity = "1";
+
+    setTimeout(() => {
+        intro.style.display = "none";
+    }, 900);
+});
+
 if (close) {
     close.addEventListener('click', () => {
     nav.classList.remove('active');
